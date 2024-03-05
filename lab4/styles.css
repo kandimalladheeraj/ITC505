@@ -1,0 +1,139 @@
+
+body, h1, h2, h3, p, ul, ol, li, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+   background-color: linear-gradient(to bottom, white, #87CEEB) ;
+    color: #333; 
+    line-height: 1.6;
+}
+
+header {
+    text-align: center; 
+    font-size:20px;
+    padding: 20px; 
+    background-color: #87CEEB; 
+    color: #fff; 
+}
+
+h1 {
+    margin: 0; 
+    transition: font-size 0.3s; 
+}
+
+h1:hover {
+    font-size: 2.5em; 
+}
+h2 {
+    background-color: #87CEEB; 
+    
+}
+
+.container {
+    display: flex; 
+    align-items: center;
+}
+
+img {
+    max-width: 100%; 
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+}
+
+section {
+    margin-bottom: 30px; 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+section h3 {
+    color: #007bff; 
+}
+
+section ul, section ol {
+    color: #333; 
+}
+
+footer {
+    background-color: orange; 
+    text-align: center; 
+    padding: 10px 0; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+    color: #fff; 
+}
+section {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#
+ul {
+    list-style-type: none; 
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px; 
+}
+
+ul li::before {
+    content: "•"; 
+    position: absolute;
+    left: 0;
+}
+
+ 
+a:hover {
+    font-size: 1.1em; 
+}
+#edu:hover {
+    background: linear-gradient(to bottom, white, #87CEEB);
+ 
+}
+#hob:hover {
+    background: linear-gradient(to bottom, white, #87CEEB);
+    
+}
+
+#acheivements:hover {
+    background: linear-gradient(to bottom, white, #87CEEB);
+    
+}
+#skills:hover {
+    background: linear-gradient(to bottom, white, #87CEEB);
+    
+}
+#add:hover {
+    background: linear-gradient(to bottom, white, #87CEEB);
+    
+}
+#css:hover {
+    background: linear-gradient(to bottom, white, #87CEEB);
+    
+}
+
+a {
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+}
+
+a:hover {
+    animation: rotateLink 1s linear; 
+    transform: rotate(360deg); 
+}
+
+@keyframes rotateLink {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
