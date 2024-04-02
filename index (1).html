@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Holy Grail Layout</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Center the video horizontally and vertically */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 360px; /* Adjust the height as needed */
+    }
+    
+    iframe {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
+
+<div id="contactPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" id="closePopup">&times;</span>
+    <h2>Contact Information</h2>
+    <p><strong>Name:</strong> Dheeraj Kandimalla</p>
+    <p><strong>Email:</strong> Dk765@nau.edu</p>
+    <p><strong>Phone Number:</strong> +1 (425)-999-1077</p>
+  </div>
+</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a button id="openContactButton" onclick="openContactPopup()">Contact</button></a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Interactive JavaScript Thingy</h2>
+    <input type="text" id="inputNumber" placeholder="Enter a number">
+    <button id="calculateButton">Check Prime</button>
+    <p id="result"></p>
+
+<!-- YouTube Video Above Footer, Centered -->
+  <div class="video-container">
+    <iframe width="540" height="360" src="https://www.youtube.com/embed/CI0sQaQ1tIY?si=G4Se1RTQHFIn4y5i" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </main>
+  <aside>
+    <a href="https://www.amazon.com/Princeton-Companion-Mathematics-Timothy-Gowers/dp/0691118809/ref=sr_1_4?dib=eyJ2IjoiMSJ9.4OR3ZDS5D5VlO0llG59ubi78lcqtarszfCIwbWem66AMVwRAnlmib2qTXGXRU7dmko1jDXcCZwB8fw8CJJFTBblf-_JB8-wxg_2ccdK1QfwCZk7Knmba0V69PCP-NJ8DuG2BBbyaIDm0NmNvnc7fmZFmBzsYBYmvLLURiffdmgbg7zVj4hPBaGzP2oPdrJaAdbr_M4P--I_ntPc9qfKqZO0KANshJqfz13-fCkVXX90_xHZxMPuzCyU5ns151GXk4tWlyQlTByzw7H8zogwSYixH0bHbBBvokq9bXVwqJco.nUXlWm8wRvtrB1bUVoxvhexvn6w1GJR-UpL2vOlNvsw&dib_tag=se&keywords=mathematics&qid=1712031126&s=books&sr=1-4" target="_blank">
+      <img src="book.jpg" alt="Amazon Ad">
+    </a>
+  </aside>
+
+  <div class="add">
+  <p>
+    <strong>Addendum:</strong><br>
+    I tackled the challenge of implementing a prime number checker using JavaScript. The goal was to create an interactive tool that checks if a number provided by the user is prime.
+
+    To solve this problem, I implemented a function called `isPrime` that checks if the given number is divisible by any number less than or equal to its square root. If it is, the number is not prime; otherwise, it is prime.
+
+    During the development process, I ensured that the user interface provides clear instructions and feedback. I added a placeholder in the input field and a result area to display whether the number is prime or not.
+
+    Overall, this project allowed me to enhance my JavaScript skills and develop a useful interactive tool. If you encounter any issues or have suggestions for further improvement, please don't hesitate to reach out.
+  </p>
+</div>
+ <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+  <script src="script.js"></script>
+</body>
+</html>
