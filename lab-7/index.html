@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mad Libs Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        select {
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .story {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            white-space: pre-wrap;
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 10px;
+            padding: 5px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mad Libs Game</h1>
+        <div class="input-group">
+            <label for="noun">Enter a noun:</label>
+            <select id="noun">
+                <option>Select a noun</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="bird">Bird</option>
+                <option value="elephant">Elephant</option>
+                <option value="lion">Lion</option>
+                <option value="tiger">Tiger</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="verb">Enter a verb:</label>
+            <select id="verb">
+                <option>Select a verb</option>
+                <option value="run">Run</option>
+                <option value="jump">Jump</option>
+                <option value="sleep">Sleep</option>
+                <option value="eat">Eat</option>
+                <option value="swim">Swim</option>
+                <option value="climb">Climb</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="adjective">Enter an adjective:</label>
+            <select id="adjective">
+                <option>Select an adjective</option>
+                <option value="big">Big</option>
+                <option value="small">Small</option>
+                <option value="fast">Fast</option>
+                <option value="slow">Slow</option>
+                <option value="furry">Furry</option>
+                <option value="scary">Scary</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="adverb">Enter an adverb:</label>
+            <select id="adverb">
+                <option>Select an adverb</option>
+                <option value="quickly">Quickly</option>
+                <option value="slowly">Slowly</option>
+                <option value="happily">Happily</option>
+                <option value="sadly">Sadly</option>
+                <option value="loudly">Loudly</option>
+                <option value="quietly">Quietly</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="animal">Enter an animal:</label>
+            <select id="animal">
+                <option>Select an animal</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="deer">Deer</option>
+                <option value="fox">Fox</option>
+                <option value="bear">Bear</option>
+                <option value="wolf">Wolf</option>
+                <option value="moose">Moose</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="food">Enter a food:</label>
+            <select id="food">
+                <option>Select a food</option>
+                <option value="pizza">Pizza</option>
+                <option value="burger">Burger</option>
+                <option value="salad">Salad</option>
+                <option value="pasta">Pasta</option>
+                <option value="sandwich">Sandwich</option>
+                <option value="soup">Soup</option>
+            </select>
+        </div>
+        <button onclick="generateStory()">Generate Story</button>
+        <div id="story" class="story text-white"></div>
+    </div>
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script>
+        function generateStory() {
+            var noun = document.getElementById("noun").value;
+            var verb = document.getElementById("verb").value;
+            var adjective = document.getElementById("adjective").value;
+            var adverb = document.getElementById("adverb").value;
+            var animal = document.getElementById("animal").value;
+            var food = document.getElementById("food").value;
+
+            var story = "Once upon a time, a " + adjective + " " + noun + " decided to " + verb + " " + adverb + ". ";
+            story += "On their way, they met a " + animal + " who offered them some " + food + ". ";
+            story += "After enjoying the " + food + ", they continued on their journey feeling very " + adjective + ".";
+            
+            document.getElementById("story").innerText = "Your Mad Lib Story: \n" + story;
+        }
+
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
